@@ -3,14 +3,17 @@ import { TextInput } from 'react-native';
 
 import { styles } from './styles';
 
-export function BatTextInput() {
+interface BatTextInputProps {
+  pass: string
+}
+
+export function BatTextInput(props: BatTextInputProps) {
   return (
         <TextInput
         style={styles.inputer}
         placeholder="password"
         multiline
-        >
-        
-        </TextInput>
+        value={props.pass}
+        />
   );
 }

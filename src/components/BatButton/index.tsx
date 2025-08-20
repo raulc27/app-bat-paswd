@@ -5,13 +5,21 @@ import { styles } from './styles';
 import { BatTextInput } from '../BatTextInput';
 
 export function BatButton() {
+    const [pass, setPass] = React.useState('');
+
+    function handleGenerateButton(){
+        setPass('ola');
+    }
+
     return (
         <>
 
-        <BatTextInput/>
-        
+        <BatTextInput
+        pass={pass}
+        />
+
             <Pressable
-                onPress={() => { console.log("fui pressionado") }}
+                onPress={handleGenerateButton}
             >
                 <Text style={styles.text}>
                     🌩️ GENERATE
