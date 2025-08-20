@@ -8,6 +8,7 @@ import {
 import {BatLogo} from '../../components/BatLogo';
 
 import styles from './Style';
+import { BatTextInput } from '../../components/BatTextInput';
 
 export default function Home(){
     return(
@@ -15,11 +16,13 @@ export default function Home(){
             <View style={styles.logoContainer}>
                 <BatLogo/>
             </View>
-            
-            <Text>
-                Home works!!!
-            </Text>
-            <StatusBar style="auto" />
+
+            <View>
+                <BatTextInput />
+            </View>
+           
+    
+            <StatusBar style="light" />
         </View>
     )
 }
