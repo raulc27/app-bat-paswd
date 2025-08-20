@@ -9,6 +9,7 @@ import {BatLogo} from '../../components/BatLogo';
 
 import styles from './Style';
 import { BatTextInput } from '../../components/BatTextInput';
+import { BatButton } from '../../components/BatButton';
 
 export default function Home(){
     return(
@@ -18,7 +19,7 @@ export default function Home(){
             </View>
 
             <View>
-                <BatTextInput />
+                <BatButton />
             </View>
            
     
