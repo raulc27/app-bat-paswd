@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Button, Text, Pressable } from 'react-native';
-
+import * as Clipboard from 'expo-clipboard';
 import { styles } from './styles';
 import { BatTextInput } from '../BatTextInput';
 import generatePass from '../../services/passwordService';
@@ -11,6 +11,10 @@ export function BatButton() {
     function handleGenerateButton(){
         let generateToken = generatePass();
         setPass(generateToken);
+    }
+
+    function handleCopyButton(){
+        Clipboard.setStringAsync(pass);
     }
 
     return (
@@ -29,8 +33,8 @@ export function BatButton() {
             </Pressable>
 
             <Pressable style={styles.button}
-                onPress={() => { console.log("fui pressionado") }}
-            >
+                onPress={handleCopyButton}
+                    >
                 <Text style={styles.text}>
                     🌩️ COPY
                 </Text>
